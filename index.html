@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Terence C. Okpogba, PhD | Plant Pathologist</title>
-<meta name="description" content="Terence C. Okpogba, PhD, plant pathologist. Research on biological control, plant extracts and their metabolites, plant diseases and crop protection.">
+<meta name="description" content="Terence C. Okpogba, PhD, plant pathologist. Research on fungal plant pathogens, biological control, plant extracts and their metabolites, plant diseases and crop protection.">
 <meta property="og:title" content="Terence C. Okpogba, PhD | Plant Pathologist">
-<meta property="og:description" content="Terence C. Okpogba, PhD, plant pathologist. Research on biological control, plant extracts and their metabolites, plant diseases and crop protection.">
+<meta property="og:description" content="Plant pathologist working on fungal plant pathogens, biological control, plant extracts and crop protection.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://terencecokpogba.github.io/">
+<link rel="canonical" href="https://terencecokpogba.github.io/">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +43,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+html, body { margin: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg); color: var(--fg);
@@ -59,9 +62,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; text-wrap: bal
 
 /* nav */
 .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
-.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; flex-wrap: wrap; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 8px 24px; min-height: 56px; flex-wrap: wrap; padding-block: 6px; }
 .nav .mark { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-decoration: none; color: var(--fg); }
-.nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav ul { display: flex; gap: 6px 20px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 .nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 .nav ul a:hover { color: var(--accent); }
 
@@ -77,7 +80,6 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; text-wrap: bal
 .plate { margin: 0; min-width: 0; }
 .plate svg { width: 100%; height: auto; display: block; }
 .plate figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
-.plate figcaption i { font-style: italic; }
 
 /* sections */
 section { border-top: 1px solid var(--line); }
@@ -85,21 +87,38 @@ section .wrap { display: grid; grid-template-columns: 200px 1fr; gap: 40px; padd
 section h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 20px; }
 .body { min-width: 0; max-width: 46rem; }
 .body p { margin: 0 0 1em; }
+.body h3.sub { font-size: 1.05rem; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
+.body h3.sub:first-of-type { margin-top: 8px; }
 .interests { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; max-width: none; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 20px; min-width: 0; }
 .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
 .card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; margin: 24px 0 0; padding: 20px; background: var(--tint); border-radius: 6px; }
 .facts dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
-.facts dd { margin: 0; min-width: 0; }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .facts em { color: var(--lesion); font-style: italic; }
 .entry { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px 24px; padding-block: 18px; border-top: 1px solid var(--line); }
 .entry:first-of-type { border-top: 0; padding-top: 0; }
+.h3 + .entry { border-top: 0; }
 .entry .when { font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); padding-top: 3px; }
-.entry h3 { font-size: 1.15rem; margin-bottom: 4px; }
-.entry p { margin: 0; color: var(--muted); }
-.pending { border: 1px dashed var(--line); border-radius: 6px; padding: 16px 20px; color: var(--muted); font-size: 0.98rem; margin-bottom: 12px; }
-.pending strong { color: var(--fg); font-weight: 600; }
+.entry h3 { font-size: 1.15rem; margin-bottom: 2px; }
+.entry .where { color: var(--muted); font-size: 0.95rem; margin: 0 0 8px; }
+.entry p { margin: 0 0 6px; color: var(--muted); }
+.entry ul { margin: 6px 0 0; padding-left: 1.1em; color: var(--muted); }
+.entry li { margin-bottom: 4px; }
+.entry strong { color: var(--fg); font-weight: 600; }
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pubs li { padding: 14px 0; border-top: 1px solid var(--line); color: var(--muted); }
+.pubs li:first-child { border-top: 0; padding-top: 0; }
+.pubs .me { color: var(--fg); }
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--lesion); border: 1px solid var(--lesion); border-radius: 3px; padding: 1px 6px; margin-left: 6px; vertical-align: 2px; white-space: nowrap; }
+.skills { display: grid; gap: 16px; margin: 0; }
+.skills div { padding: 14px 0; border-top: 1px solid var(--line); }
+.skills div:first-child { border-top: 0; padding-top: 0; }
+.skills dt { font-weight: 600; margin-bottom: 2px; }
+.skills dd { margin: 0; color: var(--muted); }
+.plain { margin: 0; padding-left: 1.1em; color: var(--muted); }
+.plain li { margin-bottom: 8px; }
 .contact dd { overflow-wrap: anywhere; }
 .addr { user-select: all; }
 .copy { font: inherit; font-size: 0.85rem; margin-left: 8px; padding: 3px 12px; border: 1px solid var(--accent); background: transparent; color: var(--accent); border-radius: 4px; cursor: pointer; }
@@ -117,21 +136,21 @@ footer .wrap { padding-block: 28px 40px; display: flex; justify-content: space-b
   .facts dd { margin-bottom: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-html, body { margin: 0; }
 </style>
-
 </head>
 <body>
+
 <header class="nav">
   <div class="wrap">
     <a class="mark" href="#top">Terence C. Okpogba, PhD</a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#interests">Interests</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#notes">Notes</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -144,32 +163,27 @@ html, body { margin: 0; }
       <div>
         <span class="label">Plant pathology · Crop protection</span>
         <h1>Terence C. Okpogba, PhD</h1>
-        <p class="lede">Plant pathologist working on biological control, plant extracts and their metabolites, and the diseases that limit crop production.</p>
+        <p class="lede">Plant pathologist working on fungal plant pathogens, biological control, plant extracts and their metabolites, and the diseases that limit crop production.</p>
         <div class="actions">
           <a class="btn primary" href="#research">Doctoral research</a>
-          <a class="btn ghost" href="#cv">Curriculum vitae</a>
+          <a class="btn ghost" href="#publications">Publications</a>
         </div>
       </div>
       <figure class="plate">
         <svg viewBox="0 0 320 320" role="img" aria-labelledby="plate-t">
-          <title id="plate-t">Schematic dual-culture plate with a dark pathogen colony on the left and a green Trichoderma colony on the right</title>
-          <defs>
-            <clipPath id="dish"><circle cx="160" cy="160" r="140"/></clipPath>
-          </defs>
+          <title id="plate-t">Schematic dual-culture plate with a brown pathogen colony on the left and a green Trichoderma colony on the right, separated by an inhibition zone</title>
           <circle cx="160" cy="160" r="150" fill="none" stroke="var(--line)" stroke-width="2"/>
           <circle cx="160" cy="160" r="140" fill="var(--tint)" stroke="var(--line)" stroke-width="1.5"/>
-          <g clip-path="url(#dish)">
-            <circle cx="78" cy="160" r="82" fill="var(--lesion)" opacity="0.88"/>
-            <circle cx="78" cy="160" r="58" fill="var(--lesion)" opacity="0.55"/>
-            <circle cx="78" cy="160" r="30" fill="var(--fg)" opacity="0.35"/>
-            <circle cx="262" cy="160" r="82" fill="var(--accent)" opacity="0.9"/>
-            <circle cx="262" cy="160" r="58" fill="var(--accent)" opacity="0.6"/>
-            <circle cx="262" cy="160" r="30" fill="var(--bg)" opacity="0.25"/>
-          </g>
-          <line x1="160" y1="30" x2="160" y2="290" stroke="var(--fg)" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
-          <text x="82" y="312" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">pathogen</text>
-          <text x="248" y="312" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">antagonist</text>
-          <text x="160" y="22" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">inhibition zone</text>
+          <ellipse cx="96" cy="160" rx="58" ry="62" fill="var(--lesion)" opacity="0.9"/>
+          <ellipse cx="96" cy="160" rx="40" ry="43" fill="var(--lesion)" opacity="0.6"/>
+          <ellipse cx="96" cy="160" rx="20" ry="22" fill="var(--fg)" opacity="0.35"/>
+          <ellipse cx="224" cy="160" rx="58" ry="62" fill="var(--accent)" opacity="0.92"/>
+          <ellipse cx="224" cy="160" rx="40" ry="43" fill="var(--accent)" opacity="0.65"/>
+          <ellipse cx="224" cy="160" rx="20" ry="22" fill="var(--bg)" opacity="0.3"/>
+          <line x1="160" y1="48" x2="160" y2="272" stroke="var(--fg)" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"/>
+          <text x="160" y="36" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">inhibition zone</text>
+          <text x="96" y="304" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">pathogen</text>
+          <text x="224" y="304" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--muted)">antagonist</text>
         </svg>
         <figcaption>Schematic dual-culture plate: <i>Trichoderma</i> confronting <i>Lasiodiplodia</i>.</figcaption>
       </figure>
@@ -181,32 +195,26 @@ html, body { margin: 0; }
       <div class="label">About</div>
       <div class="body">
         <h2>Protecting crops with biology first</h2>
-        <p>I am a plant pathologist with a PhD from the University of Ibadan, completed with an IITA fellowship. My work asks how living antagonists and plant-derived compounds can control the pathogens that damage crops and stored produce, and how those options can sit alongside sound crop protection practice.</p>
-        <p>This site is my online CV and a place to share projects and notes with researchers, students and practitioners in plant pathology, food safety and the wider STEM community.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="interests">
-    <div class="wrap">
-      <div class="label">Research interests</div>
-      <div class="body interests">
-        <article class="card">
-          <h3>Biological control</h3>
-          <p>Using fungal and bacterial antagonists such as <i>Trichoderma</i> to suppress plant pathogens in the field and in storage.</p>
-        </article>
-        <article class="card">
-          <h3>Plant extracts and metabolites</h3>
-          <p>Screening botanical extracts for antifungal activity and characterising the secondary metabolites responsible.</p>
-        </article>
-        <article class="card">
-          <h3>Plant diseases</h3>
-          <p>Diagnosis, aetiology and epidemiology of fungal diseases, including post-harvest rots of root and tuber crops.</p>
-        </article>
-        <article class="card">
-          <h3>Crop protection</h3>
-          <p>Integrated, lower-risk approaches that protect yield and food quality while limiting reliance on synthetic fungicides.</p>
-        </article>
+        <p>I am a plant pathologist based in Ibadan, Nigeria, with a PhD in Plant Pathology from the University of Ibadan. My work covers fungal plant pathogens, crop disease diagnosis, pathogenicity and virulence assessment, molecular characterisation and sustainable disease management, with a focus on biological control agents and plant-derived extracts.</p>
+        <p>I have worked on diseases of yam and maize, led disease surveys across more than 3,000 oil-palm stands, and teach and mentor students in botany and plant pathology. This site is my online CV and a place to share projects and notes with fellow STEM enthusiasts and with people working on plant health and food safety.</p>
+        <div class="interests" style="margin-top:28px">
+          <article class="card">
+            <h3>Biological control</h3>
+            <p>Fungal antagonists such as <i>Trichoderma</i> against plant pathogens in the laboratory and in storage.</p>
+          </article>
+          <article class="card">
+            <h3>Plant extracts and metabolites</h3>
+            <p>Botanical extracts with antifungal activity and the secondary metabolites behind it.</p>
+          </article>
+          <article class="card">
+            <h3>Plant diseases</h3>
+            <p>Diagnosis and characterisation of fungal diseases, including postharvest rots of root and tuber crops.</p>
+          </article>
+          <article class="card">
+            <h3>Crop protection</h3>
+            <p>Integrated, lower-risk approaches that protect yield and food quality.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -215,49 +223,195 @@ html, body { margin: 0; }
     <div class="wrap">
       <div class="label">Doctoral research</div>
       <div class="body">
-        <h2>Biological control of <i>Lasiodiplodia</i> tuber rot in white yam</h2>
-        <p>My doctoral work addressed tuber rot of white yam caused by <i>Lasiodiplodia</i>, a major source of loss in yam production and storage. I evaluated plant extracts and <i>Trichoderma</i> as biological alternatives for managing the disease.</p>
+        <h2><i>Lasiodiplodia</i> rot of white yam and its biological control</h2>
+        <p>My thesis characterised <i>Lasiodiplodia</i> species associated with postharvest rot of white yam (<i>Dioscorea rotundata</i> Poir.) and evaluated <i>Trichoderma</i> species and selected botanicals for managing the disease. The work combined morphology, pathogenicity testing and ITS-based molecular analysis with replicated in vitro and in vivo experiments.</p>
         <dl class="facts">
           <dt>Pathogen</dt><dd><em>Lasiodiplodia</em> spp.</dd>
-          <dt>Host</dt><dd>White yam</dd>
-          <dt>Approaches</dt><dd>Plant extracts and their metabolites; <em>Trichoderma</em> as a biocontrol agent</dd>
-          <dt>Institution</dt><dd>University of Ibadan, with an IITA fellowship</dd>
-          <dt>Status</dt><dd>Defended August 2026</dd>
+          <dt>Host</dt><dd>White yam, <em>Dioscorea rotundata</em> Poir.</dd>
+          <dt>Characterisation</dt><dd>Colony and microscopic morphology, pathogenicity assays, ITS sequencing and phylogenetic analysis</dd>
+          <dt>Management</dt><dd><em>Trichoderma atroviride</em>, <em>T. harzianum</em> and selected botanical extracts</dd>
+          <dt>Institution</dt><dd>University of Ibadan, with IITA research support</dd>
+          <dt>Status</dt><dd>Defended 18 August 2026</dd>
         </dl>
       </div>
     </div>
   </section>
 
-  <section id="cv">
+  <section id="experience">
     <div class="wrap">
-      <div class="label">Curriculum vitae</div>
+      <div class="label">Experience</div>
       <div class="body">
-        <h2>Education and training</h2>
+        <h2>Research and professional experience</h2>
+
         <div class="entry">
-          <div class="when">2026</div>
+          <div class="when">2019–2026</div>
           <div>
-            <h3>PhD, Plant Pathology</h3>
-            <p>University of Ibadan. Thesis on biological control of <i>Lasiodiplodia</i> tuber rot in white yam using plant extracts and <i>Trichoderma</i>.</p>
+            <h3>PhD Researcher, Plant Pathology</h3>
+            <p class="where">Department of Botany, University of Ibadan</p>
+            <ul>
+              <li>Isolated, purified and characterised fungal pathogens of white yam using morphology, pathogenicity tests and ITS-based molecular methods.</li>
+              <li>Designed controlled inoculation experiments to measure pathogen virulence, disease severity and treatment effects.</li>
+              <li>Evaluated <i>Trichoderma atroviride</i>, <i>T. harzianum</i> and botanical extracts in replicated in vitro and in vivo trials.</li>
+              <li>Ran DNA extraction, PCR, sequencing, alignment and phylogenetic analysis, and analysed data in R and GraphPad Prism, including ANOVA, probit/LC50 and FICI.</li>
+            </ul>
           </div>
         </div>
+
         <div class="entry">
-          <div class="when">Doctoral period</div>
+          <div class="when">January 2026</div>
           <div>
-            <h3>IITA Fellow</h3>
-            <p>International Institute of Tropical Agriculture, Ibadan, Nigeria.</p>
+            <h3>Field Consultant, Oil-Palm Disease Survey</h3>
+            <p class="where">Commercial plantations, Ibadan area</p>
+            <ul>
+              <li>Ran standardised disease surveys across more than 3,000 oil-palm stands on two plantations.</li>
+              <li>Assessed symptoms of Ganoderma basal stem rot and possible <i>Lasiodiplodia</i> root rot, collected samples and contributed diagnosis and management recommendations.</li>
+            </ul>
           </div>
         </div>
-        <div class="pending"><strong>Publications, conference presentations, awards and teaching</strong> will be listed here.</div>
+
+        <div class="entry">
+          <div class="when">2025–Present</div>
+          <div>
+            <h3>Part-Time Lecturer</h3>
+            <p class="where">Dominican University, Ibadan</p>
+            <p>Teaches Contemporary Health Issues and communicates scientific and health concepts to university students.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="when">2024–2026</div>
+          <div>
+            <h3>Research Support and Mentoring</h3>
+            <p class="where">IITA and University of Ibadan</p>
+            <ul>
+              <li>Supported IITA PhD research (from May 2024), including <i>Aspergillus flavus</i> work and maize field experiments with field inoculation in 2025.</li>
+              <li>Mentored MSc projects on <i>Lasiodiplodia</i> in water-yam rot, spoilage fungi of pepper, fungal control with mushroom-derived materials, and <i>Colletotrichum</i> in cucumber rot.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="when">2019–Present</div>
+          <div>
+            <h3>Teaching Assistant</h3>
+            <p class="where">Department of Botany, University of Ibadan</p>
+            <p>Supports teaching in Biology and Inorganic Chemistry and helps students with scientific concepts and practical work.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="when">2024–Present</div>
+          <div>
+            <h3>Chief Operating Officer</h3>
+            <p class="where">GLARCH Nigeria Limited, Ibadan</p>
+            <p>Coordinates food processing, drying, packaging and storage with attention to hygiene, product quality and food safety.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="notes">
+  <section id="education">
     <div class="wrap">
-      <div class="label">Notes</div>
+      <div class="label">Education</div>
       <div class="body">
-        <h2>Writing and projects</h2>
-        <p>Short articles on biological control, plant extracts and their metabolites, plant disease management and food safety will appear here, along with project write-ups for fellow STEM enthusiasts.</p>
+        <h2>Academic training</h2>
+
+        <div class="entry">
+          <div class="when">2019–2026</div>
+          <div>
+            <h3>PhD, Plant Pathology</h3>
+            <p class="where">University of Ibadan, Nigeria</p>
+            <p>Thesis on the characterisation of <i>Lasiodiplodia</i> species causing postharvest rot of white yam and the evaluation of <i>Trichoderma</i> and botanicals for disease management.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="when">2016–2018</div>
+          <div>
+            <h3>MSc, Botany (Plant Pathology)</h3>
+            <p class="where">University of Ibadan, Nigeria · CGPA 6.0/7.0</p>
+            <p>Research on the antimicrobial potential of <i>Xylopia aethiopica</i> and <i>Syzygium aromaticum</i> extracts against postharvest rot of <i>Dioscorea alata</i> and <i>D. rotundata</i>.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="when">2007–2012</div>
+          <div>
+            <h3>BSc, Botany</h3>
+            <p class="where">Nnamdi Azikiwe University, Awka, Nigeria · Second Class Honours</p>
+            <p>Undergraduate thesis on the phytochemical analysis and proximate composition of <i>Xylopia aethiopica</i>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <div class="label">Publications</div>
+      <div class="body">
+        <h2>Publications, presentations and training</h2>
+
+        <h3 class="sub">Journal articles</h3>
+        <ul class="pubs">
+          <li><span class="me">Okpogba, T. C.</span>, Sobowale, A. A. &amp; Gbadamosi, I. T. (2019). Control of some <i>Penicillium</i> and <i>Aspergillus</i> rots of <i>Dioscorea alata</i> and <i>Dioscorea rotundata</i> using extracts of <i>Xylopia aethiopica</i> and <i>Syzygium aromaticum</i>. <i>African Journal of Plant Science</i>, 13(5), 113–124. <a href="https://doi.org/10.5897/AJPS2019.1764" target="_blank" rel="noopener">DOI</a></li>
+          <li>Sobowale, A. A. &amp; <span class="me">Okpogba, T. C.</span> (2019). Probable effects of dual inoculation of maize stem with <i>Fusarium verticillioides</i> and certain <i>Trichoderma</i> species on fumonisin content of maize seeds. <i>American Journal of Plant Sciences</i>, 10(5), 752–759. <a href="https://doi.org/10.4236/ajps.2019.105055" target="_blank" rel="noopener">DOI</a></li>
+          <li>Adenipekun, C. O., Awoyemi, D. &amp; <span class="me">Okpogba, T. C.</span> (2022). Effect of storage on proximate composition, fungal incidence and aflatoxin content in selected edible mushrooms. <i>Journal of Science Research</i>, 18(1), 9. <a href="https://www.jsribadan.ng/index.php/ojs/article/view/13" target="_blank" rel="noopener">Article</a></li>
+        </ul>
+
+        <h3 class="sub">Manuscripts</h3>
+        <ul class="pubs">
+          <li><span class="me">Okpogba, T. C.</span> et al. (2026). Morphological and molecular characterisation of <i>Lasiodiplodia</i> species causing postharvest rot in <i>Dioscorea rotundata</i>. <i>Discover Plants</i>. <span class="tag">Under review</span></li>
+          <li><span class="me">Okpogba, T. C.</span> et al. (2026). In vitro and in vivo evaluation of <i>Trichoderma atroviride</i> against <i>Lasiodiplodia</i> spp. associated with postharvest rot in white yam. <a href="https://doi.org/10.21203/rs.3.rs-10405727/v1" target="_blank" rel="noopener">Preprint</a> <span class="tag">Preprint</span></li>
+        </ul>
+
+        <h3 class="sub">Conference presentations</h3>
+        <div class="entry">
+          <div class="when">June 2026</div>
+          <div>
+            <h3>In vivo evaluation of antagonistic potentials of <i>Trichoderma atroviride</i> against <i>Lasiodiplodia</i> in white yam</h3>
+            <p class="where">Botanical Society of Nigeria Conference, Ilorin, 7–10 June 2026 · Poster</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="when">Sept–Oct 2025</div>
+          <div>
+            <h3>Biocontrol of <i>Trichoderma</i> and <i>Syzygium aromaticum</i> against <i>Lasiodiplodia</i> spp. causing postharvest tuber rot in white yam</h3>
+            <p class="where">IARSAF Annual Symposium, IITA, Ibadan, 28 September–1 October 2025 · Poster</p>
+          </div>
+        </div>
+
+        <h3 class="sub">Research training</h3>
+        <ul class="plain">
+          <li>Introductory Genome-Wide Association Studies (GWAS), IARSAF/IITA West African Hub, August 2025</li>
+          <li>Statistics Tests using RStudio, IARSAF/IITA, June 2025</li>
+          <li>Molecular Biology Training, Bioscience Centre, IITA, November 2023</li>
+          <li>Managing Risk in the Face of Climate Change, Wageningen Centre for Development Innovation, June–August 2023</li>
+          <li>Integrated Pest Management and Food Security, Wageningen Centre for Development Innovation, May–June 2021</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="label">Skills and service</div>
+      <div class="body">
+        <h2>Technical skills</h2>
+        <dl class="skills">
+          <div><dt>Plant pathology and mycology</dt><dd>Fungal isolation and purification, culture maintenance, morphological characterisation, disease diagnosis, pathogenicity and virulence assays, disease incidence and severity scoring.</dd></div>
+          <div><dt>Field and experimental methods</dt><dd>Field surveys and sample collection, controlled inoculation, replicated experiments, in vitro and in vivo bioassays, dual-culture antagonism, poisoned-food and agar-well assays, postharvest disease assessment.</dd></div>
+          <div><dt>Molecular methods and bioinformatics</dt><dd>DNA extraction, PCR, ITS amplification and sequencing, gel electrophoresis, sequence editing, alignment and phylogenetic analysis with BioEdit, MEGA and iTOL.</dd></div>
+          <div><dt>Data and reporting</dt><dd>R and RStudio, GraphPad Prism, Excel, ANOVA, multiple comparisons, probit/LC50, FICI, scientific writing and presentations.</dd></div>
+        </dl>
+
+        <h3 class="sub">Service and memberships</h3>
+        <ul class="plain">
+          <li>Founder, Microbes and Meals Food Safety Outreach (2025–Present)</li>
+          <li>Member, Education and Teaching Committee, American Phytopathological Society, African Division (2025–Present); member of APS-AD since 2023</li>
+          <li>Member of African Food Safety Professionals and Practitioners (2025), International Association for Research Scholars and Fellows (2024), Asian Phytopathological Society (2024), American Society of Plant Biologists (2023), Science Association of Nigeria (2018) and Botanical Society of Nigeria (2011)</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -267,12 +421,16 @@ html, body { margin: 0; }
       <div class="label">Contact</div>
       <div class="body">
         <h2>Collaboration and enquiries</h2>
-        <p>I welcome conversations about research collaboration, biocontrol and botanical crop protection, and mentoring for students entering plant pathology.</p>
+        <p>I welcome conversations about research collaboration, biocontrol and botanical crop protection, food safety outreach, and mentoring for students entering plant pathology. Referees are available on request.</p>
         <dl class="facts contact">
           <dt>Email</dt>
           <dd><span class="addr" id="email-text">terencecokpogba@gmail.com</span> <button type="button" class="copy" id="copy-email">Copy</button></dd>
           <dt>LinkedIn</dt>
           <dd><a href="https://www.linkedin.com/in/terence-c-okpogba-phd-315b57a4" target="_blank" rel="noopener">linkedin.com/in/terence-c-okpogba-phd</a></dd>
+          <dt>ORCID</dt>
+          <dd><a href="https://orcid.org/0000-0002-9516-9284" target="_blank" rel="noopener">0000-0002-9516-9284</a></dd>
+          <dt>Location</dt>
+          <dd>Ibadan, Oyo State, Nigeria</dd>
         </dl>
       </div>
     </div>
@@ -303,6 +461,5 @@ html, body { margin: 0; }
   });
 })();
 </script>
-
 </body>
 </html>
