@@ -90,6 +90,11 @@ section h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 20px; }
 .body p { margin: 0 0 1em; }
 .body h3.sub { font-size: 1.05rem; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
 .body h3.sub:first-of-type { margin-top: 8px; }
+.about-top { display: grid; grid-template-columns: 1fr 220px; gap: 32px; align-items: start; }
+.about-top > div { min-width: 0; }
+.portrait { margin: 0; }
+.portrait img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--line); background: var(--tint); }
+.portrait figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
 .interests { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; max-width: none; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 20px; min-width: 0; }
 .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
@@ -131,6 +136,8 @@ footer .wrap { padding-block: 28px 40px; display: flex; justify-content: space-b
   .hero .wrap { gap: 28px; padding-block: 40px 36px; }
   section .wrap { grid-template-columns: 1fr; gap: 8px; padding-block: 44px; }
   .interests { grid-template-columns: 1fr; }
+  .about-top { grid-template-columns: 1fr; }
+  .portrait { max-width: 240px; order: -1; }
   .entry { grid-template-columns: 1fr; gap: 2px; }
   .facts { grid-template-columns: 1fr; gap: 2px; }
   .facts dd { margin-bottom: 10px; }
@@ -180,9 +187,17 @@ footer .wrap { padding-block: 28px 40px; display: flex; justify-content: space-b
     <div class="wrap">
       <div class="label">About</div>
       <div class="body">
+        <div class="about-top">
+        <div>
         <h2>Protecting crops with biology first</h2>
         <p>I am a plant pathologist based in Ibadan, Nigeria, with a PhD in Plant Pathology from the University of Ibadan. My work covers fungal plant pathogens, crop disease diagnosis, pathogenicity and virulence assessment, molecular characterisation and sustainable disease management, with a focus on biological control agents and plant-derived extracts.</p>
         <p>I have worked on diseases of yam and maize, led disease surveys across more than 3,000 oil-palm stands, and teach and mentor students in botany and plant pathology. This site is my online CV and a place to share projects and notes with fellow STEM enthusiasts and with people working on plant health and food safety.</p>
+        </div>
+        <figure class="portrait">
+          <img src="terence-okpogba.jpeg" width="640" height="800" alt="Portrait of Terence C. Okpogba, PhD, seated at a desk in a navy blazer and green blouse">
+          <figcaption>Terence C. Okpogba, PhD</figcaption>
+        </figure>
+        </div>
         <div class="interests" style="margin-top:28px">
           <article class="card">
             <h3>Biological control</h3>
